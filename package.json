@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node build/server.js",
+    "build": "tsup src --out-dir build",
     "dev": "tsx watch --no-cache src/server.ts"
   },
   "keywords": [],
