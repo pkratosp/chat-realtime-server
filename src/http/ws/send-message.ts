@@ -7,7 +7,7 @@ export async function appSendMessage(app: FastifyInstance) {
    
     const socketIO = new Server(app.server, {
         cors: {
-            origin: "http://localhost:3000"
+            origin: "https://chat-realtime-client.vercel.app"
         }
     })
 
