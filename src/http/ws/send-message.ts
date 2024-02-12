@@ -1,13 +1,14 @@
 import { SocketStream } from "@fastify/websocket";
 import { FastifyInstance, FastifyRequest } from "fastify";
 import { Server } from "socket.io";
+import { env } from "../../../env/env";
 
 
 export async function appSendMessage(app: FastifyInstance) {
    
     const socketIO = new Server(app.server, {
         cors: {
-            origin: "https://chat-realtime-client.vercel.app"
+            origin: env.SOCKETIO_CORS
         }
     })
 

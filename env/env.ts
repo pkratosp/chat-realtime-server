@@ -5,6 +5,7 @@ import zod from "zod";
 const envSchema = zod.object({
     PORT: zod.coerce.number().default(3333),
     NODE_ENV: zod.enum(["dev","production","test"]).default("dev"),
+    SOCKETIO_CORS: zod.string()
 });
 
 const _env = envSchema.safeParse(process.env);
